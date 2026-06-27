@@ -1,4 +1,4 @@
-name: My First CI Pipeline
+name: Playwright CI
 
 on:
   push:
@@ -6,9 +6,15 @@ on:
       - github-actions
 
 jobs:
-  hello:
+  playwright:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello
-        run: echo "Hello from GitHub Actions!"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
