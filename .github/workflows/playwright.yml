@@ -3,7 +3,7 @@ name: My First CI Pipeline
 on:
   push:
     branches:
-      - feature/github-actions
+      - github-actions
 
 jobs:
   hello:
